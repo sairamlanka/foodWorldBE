@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    restart: always
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://dpg-ctqnu8hopnds73fac7m0-a.singapore-postgres.render.com:5432/foodworld
+      SPRING_DATASOURCE_USERNAME: foodworld_user
+      SPRING_DATASOURCE_PASSWORD: yELBUwMO91lub5V9iClven9QVJECw9OH
+      SPRING_DATASOURCE_DRIVER-CLASS-NAME: org.postgresql.Driver
+      SPRING_JPA_HIBERNATE_DDL-AUTO: update
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.PostgreSQLDialect
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16.4
+    restart: always
+    environment:
+      POSTGRES_DB: foodworld
+      POSTGRES_USER: foodworld_user
+      POSTGRES_PASSWORD: yELBUwMO91lub5V9iClven9QVJECw9OH
+    ports:
+      - "5432:5432"
