@@ -13,7 +13,7 @@ import com.foodWorld.service.TableService;
 
 @RestController
 @RequestMapping("/api/tables")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://foodworldui.onrender.com")
 public class TableController {
 	
 	@Autowired

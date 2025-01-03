@@ -26,7 +26,7 @@ import com.foodWorld.service.SendEmailService;
 
 @RestController
 @RequestMapping("/api/orders")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://foodworldui.onrender.com")
 public class OrderController {
 
     @Autowired

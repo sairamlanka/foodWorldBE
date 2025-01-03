@@ -20,7 +20,7 @@ import com.foodWorld.service.UserService;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://foodworldui.onrender.com")
 public class UserController {
 
     private final UserService userService;

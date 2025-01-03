@@ -26,7 +26,7 @@ import com.foodWorld.service.CategoryItemsService;
 
 @RestController
 @RequestMapping("/api/categoryItems")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://foodworldui.onrender.com")
 public class CategoryItemsController {
 	
 	@Autowired
